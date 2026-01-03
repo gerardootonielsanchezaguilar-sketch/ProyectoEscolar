@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../Semanticas"
+		},
+		{
+			"path": "../ejemplo"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ejemplo"
+	}
+}

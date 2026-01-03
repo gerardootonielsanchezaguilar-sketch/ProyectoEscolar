@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: #dde9f0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+   background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../IMG/CENTRO.jpg') center/cover no-repeat fixed;
+}
+
+
+.navbar {
+  background: #ffffff;
+  color: black;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+position: relative;
+  ;
+}
+
+.navbar h1 {
+  position:absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: x-large;
+  text-align: center;
+}
+.navbar .logo {
+  width: 100px;       
+  height: auto;
+  margin-left: 15px;
+  transition: transform 0.5s ease; 
+}
+
+.navbar .logo:hover {
+  transform: translateY(-5px);
+}
+
+.navbar nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.navbar nav a:hover {
+  opacity: 0.7;
+}
+
+.navbar nav a.active {
+  border-bottom: 2px solid #111111;
+}
+
+.navbar nav .btn-salir {
+  background-color: #A65A31;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  margin-right: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar nav .btn-salir:hover {
+  background-color: #8B4513;
+  opacity: 1;
+}
+
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 20px 10px;
+    
+  
+}
+
+
+.intro h2 {
+  font-size: x-large;
+  color: #ffffff;
+  margin-bottom: 10px;
+    
+  
+}
+
+.intro p {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+
+.carrusel {
+  position: relative;
+  width: 55%;
+  max-width: 1200px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: slideAnim 12s infinite;
+}
+
+.slides img {
+  width: 33.333%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@keyframes slideAnim {
+  0%, 16.666% { transform: translateX(0%); }
+  33.333%, 49.999% { transform: translateX(-33.333%); }
+  66.666%, 83.333% { transform: translateX(-66.666%); }
+  100% { transform: translateX(0%); }
+}
+
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.controls span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.controls span:hover {
+  background: white;
+}
+
+
+footer {
+  background: #ffffff;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  flex-shrink: 0;
+  
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar nav {
+    margin-top: 10px;
+  }
+  .slides img {
+    width: 100%;
+  }
+}
